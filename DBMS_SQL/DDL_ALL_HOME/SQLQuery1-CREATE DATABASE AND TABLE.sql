@@ -1,9 +1,8 @@
+ï»¿USE master;
 GO
 
-USE master;
+PRINT 'Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ð±Ð°Ð·Ñ‹ Ð´Ð°Ð½Ð½Ñ‹Ñ… VPD_311_HOME';
 GO
-
-PRINT 'Ñîçäàíèå áàçû äàííûõ VPD_311_HOME';
 IF NOT EXISTS (SELECT * FROM sys.databases WHERE name = 'VPD_311_HOME')
 BEGIN
 CREATE DATABASE VPD_311_HOME
@@ -24,10 +23,10 @@ LOG ON
 	MAXSIZE = 500 MB,
 	FILEGROWTH = 8 MB
 )
-PRINT 'Áàçà äàííûõ VPD_311_HOME óñïåøíî ñîçäàíà!';
+PRINT 'Ð‘Ð°Ð·Ð° Ð´Ð°Ð½Ð½Ñ‹Ñ… VPD_311_HOME ÑƒÑÐ¿ÐµÑˆÐ½Ð¾ ÑÐ¾Ð·Ð´Ð°Ð½Ð°!';
 END
 ELSE
-PRINT 'Áàçà äàííûõ VPD_311_HOME óæå ñóùåñòâóåò!';
+PRINT 'Ð‘Ð°Ð·Ð° Ð´Ð°Ð½Ð½Ñ‹Ñ… VPD_311_HOME ÑƒÐ¶Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚!';
 GO
 
 USE VPD_311_HOME
@@ -35,7 +34,7 @@ GO
 
 
 
-PRINT 'Ñîçäàíèå òàáëèöû Directions...';
+PRINT 'Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñ‹ Directions...';
 GO
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Directions')
 BEGIN
@@ -44,15 +43,15 @@ CREATE TABLE Directions
 	direction_id		TINYINT			PRIMARY KEY,
 	direction_name		NVARCHAR(150)	NOT NULL
 )
-PRINT 'Òàáëèöà Directions óñïåøíî ñîçäàíà!';
+PRINT 'Ð¢Ð°Ð±Ð»Ð¸Ñ†Ð° Directions ÑƒÑÐ¿ÐµÑˆÐ½Ð¾ ÑÐ¾Ð·Ð´Ð°Ð½Ð°!';
 END
 ELSE
-PRINT 'Òàáëèöà Directions óæå ñóùåñòâóåò!';
+PRINT 'Ð¢Ð°Ð±Ð»Ð¸Ñ†Ð° Directions ÑƒÐ¶Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚!';
 GO
 
 
 
-PRINT 'Ñîçäàíèå òàáëèöû Groups...';
+PRINT 'Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñ‹ Groups...';
 GO
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Groups')
 BEGIN
@@ -64,15 +63,15 @@ CREATE TABLE Groups
 	--Create a foreign key
 	CONSTRAINT FK_Groups_Directions FOREIGN KEY(direction) REFERENCES Directions(direction_id)
 )
-PRINT 'Òàáëèöà Groups óñïåøíî ñîçäàíà!';
+PRINT 'Ð¢Ð°Ð±Ð»Ð¸Ñ†Ð° Groups ÑƒÑÐ¿ÐµÑˆÐ½Ð¾ ÑÐ¾Ð·Ð´Ð°Ð½Ð°!';
 END
 ELSE
-PRINT 'Òàáëèöà Groups óæå ñóùåñòâóåò!';
+PRINT 'Ð¢Ð°Ð±Ð»Ð¸Ñ†Ð° Groups ÑƒÐ¶Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚!';
 GO
 
 
 
-PRINT 'Ñîçäàíèå òàáëèöû Students...';
+PRINT 'Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñ‹ Students...';
 GO
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Students')
 BEGIN
@@ -86,15 +85,15 @@ CREATE TABLE Students
 	[group]				INT					NULL
 	CONSTRAINT FK_Students_Groups FOREIGN KEY REFERENCES Groups(group_id)
 )
-PRINT 'Òàáëèöà Students óñïåøíî ñîçäàíà!';
+PRINT 'Ð¢Ð°Ð±Ð»Ð¸Ñ†Ð° Students ÑƒÑÐ¿ÐµÑˆÐ½Ð¾ ÑÐ¾Ð·Ð´Ð°Ð½Ð°!';
 END
 ELSE
-PRINT 'Òàáëèöà Students óæå ñóùåñòâóåò!';
+PRINT 'Ð¢Ð°Ð±Ð»Ð¸Ñ†Ð° Students ÑƒÐ¶Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚!';
 GO
 
 
 
-PRINT 'Ñîçäàíèå òàáëèöû Teachers...';
+PRINT 'Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñ‹ Teachers...';
 GO
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Teachers')
 BEGIN
@@ -107,16 +106,16 @@ CREATE TABLE Teachers
 	birth_date			DATE			NOT NULL,
 	work_since			DATE			NOT NULL
 )
-PRINT 'Òàáëèöà Teachers óñïåøíî ñîçäàíà!';
+PRINT 'Ð¢Ð°Ð±Ð»Ð¸Ñ†Ð° Teachers ÑƒÑÐ¿ÐµÑˆÐ½Ð¾ ÑÐ¾Ð·Ð´Ð°Ð½Ð°!';
 END
 ELSE
-PRINT 'Òàáëèöà Teachers óæå ñóùåñòâóåò!';
+PRINT 'Ð¢Ð°Ð±Ð»Ð¸Ñ†Ð° Teachers ÑƒÐ¶Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚!';
 GO
 
 
 
 
-PRINT 'Ñîçäàíèå òàáëèöû Disciplines...';
+PRINT 'Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñ‹ Disciplines...';
 GO
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Disciplines')
 BEGIN
@@ -126,16 +125,16 @@ CREATE TABLE Disciplines
 	discipline_name		NVARCHAR(150)	NOT NULL,
 	number_of_lessons	TINYINT			NOT NULL
 )
-PRINT 'Òàáëèöà Disciplines óñïåøíî ñîçäàíà!';
+PRINT 'Ð¢Ð°Ð±Ð»Ð¸Ñ†Ð° Disciplines ÑƒÑÐ¿ÐµÑˆÐ½Ð¾ ÑÐ¾Ð·Ð´Ð°Ð½Ð°!';
 END
 ELSE
-PRINT 'Òàáëèöà Disciplines óæå ñóùåñòâóåò!';
+PRINT 'Ð¢Ð°Ð±Ð»Ð¸Ñ†Ð° Disciplines ÑƒÐ¶Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚!';
 GO
 
 
 
 
-PRINT 'Ñîçäàíèå òàáëèöû RequiredDisciplines...';
+PRINT 'Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñ‹ RequiredDisciplines...';
 GO
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Schedule')
 BEGIN
@@ -147,16 +146,16 @@ CREATE TABLE RequiredDisciplines
 	CONSTRAINT FK_RD_Discipline_2_Discipline FOREIGN KEY (discipline)			REFERENCES Disciplines(discipline_id),
 	CONSTRAINT FK_RD_Required_2_Discipline	 FOREIGN KEY(required_discipline)	REFERENCES Disciplines(discipline_id)
 )
-PRINT 'Òàáëèöà RequiredDisciplines óñïåøíî ñîçäàíà!';
+PRINT 'Ð¢Ð°Ð±Ð»Ð¸Ñ†Ð° RequiredDisciplines ÑƒÑÐ¿ÐµÑˆÐ½Ð¾ ÑÐ¾Ð·Ð´Ð°Ð½Ð°!';
 END
 ELSE
-PRINT 'Òàáëèöà RequiredDisciplines óæå ñóùåñòâóåò!';
+PRINT 'Ð¢Ð°Ð±Ð»Ð¸Ñ†Ð° RequiredDisciplines ÑƒÐ¶Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚!';
 GO
 
 
 
 
-PRINT 'Ñîçäàíèå òàáëèöû TeachersDisciplinesRelation...';
+PRINT 'Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñ‹ TeachersDisciplinesRelation...';
 GO
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'TeachersDisciplinesRelation')
 BEGIN
@@ -168,16 +167,16 @@ CREATE TABLE TeachersDisciplinesRelation
 	CONSTRAINT FK_TDR_Teachers		FOREIGN KEY	(teacher)		REFERENCES Teachers(teacher_id),
 	CONSTRAINT FK_TDR_Disciplines	FOREIGN KEY (discipline)	REFERENCES Disciplines(discipline_id)
 )
-PRINT 'Òàáëèöà TeachersDisciplinesRelation óñïåøíî ñîçäàíà!';
+PRINT 'Ð¢Ð°Ð±Ð»Ð¸Ñ†Ð° TeachersDisciplinesRelation ÑƒÑÐ¿ÐµÑˆÐ½Ð¾ ÑÐ¾Ð·Ð´Ð°Ð½Ð°!';
 END
 ELSE
-PRINT 'Òàáëèöà TeachersDisciplinesRelation óæå ñóùåñòâóåò!';
+PRINT 'Ð¢Ð°Ð±Ð»Ð¸Ñ†Ð° TeachersDisciplinesRelation ÑƒÐ¶Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚!';
 GO
 
 
 
 
-PRINT 'Ñîçäàíèå òàáëèöû DisciplinesDirectionRelation...';
+PRINT 'Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñ‹ DisciplinesDirectionRelation...';
 GO
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'DisciplinesDirectionRelation')
 BEGIN
@@ -189,15 +188,15 @@ CREATE TABLE DisciplinesDirectionRelation
 	CONSTRAINT FK_DDR_Disciplines	FOREIGN KEY (discipline)	REFERENCES Disciplines(discipline_id),
 	CONSTRAINT FK_DDR_Directions	FOREIGN KEY (direction)		REFERENCES Directions(direction_id)
 )
-PRINT 'Òàáëèöà DisciplinesDirectionRelation óñïåøíî ñîçäàíà!';
+PRINT 'Ð¢Ð°Ð±Ð»Ð¸Ñ†Ð° DisciplinesDirectionRelation ÑƒÑÐ¿ÐµÑˆÐ½Ð¾ ÑÐ¾Ð·Ð´Ð°Ð½Ð°!';
 END
 ELSE
-PRINT 'Òàáëèöà DisciplinesDirectionRelation óæå ñóùåñòâóåò!';
+PRINT 'Ð¢Ð°Ð±Ð»Ð¸Ñ†Ð° DisciplinesDirectionRelation ÑƒÐ¶Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚!';
 GO
 
 
 
-PRINT 'Ñîçäàíèå òàáëèöû Schedule...';
+PRINT 'Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñ‹ Schedule...';
 GO
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Schedule')
 BEGIN
@@ -212,15 +211,15 @@ CREATE TABLE Schedule
 	[subject]			NVARCHAR(256)	NULL,
 	spent				BIT			NOT NULL
 )
-PRINT 'Òàáëèöà Schedule óñïåøíî ñîçäàíà!';
+PRINT 'Ð¢Ð°Ð±Ð»Ð¸Ñ†Ð° Schedule ÑƒÑÐ¿ÐµÑˆÐ½Ð¾ ÑÐ¾Ð·Ð´Ð°Ð½Ð°!';
 END
 ELSE
-PRINT 'Òàáëèöà Schedule óæå ñóùåñòâóåò!';
+PRINT 'Ð¢Ð°Ð±Ð»Ð¸Ñ†Ð° Schedule ÑƒÐ¶Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚!';
 GO
 
 
 
-PRINT 'Ñîçäàíèå òàáëèöû Grades...';
+PRINT 'Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñ‹ Grades...';
 GO
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Grades')
 BEGIN
@@ -233,16 +232,16 @@ CREATE TABLE Grades
 	grade_1				TINYINT					CONSTRAINT CK_Grades_1 CHECK (grade_1>0 AND grade_1<=12),
 	grade_2				TINYINT					CONSTRAINT CK_Grades_2 CHECK (grade_2>0 AND grade_2<=12)
 )
-PRINT 'Òàáëèöà Grades óñïåøíî ñîçäàíà!';
+PRINT 'Ð¢Ð°Ð±Ð»Ð¸Ñ†Ð° Grades ÑƒÑÐ¿ÐµÑˆÐ½Ð¾ ÑÐ¾Ð·Ð´Ð°Ð½Ð°!';
 END
 ELSE
-PRINT 'Òàáëèöà Grades óæå ñóùåñòâóåò!';
+PRINT 'Ð¢Ð°Ð±Ð»Ð¸Ñ†Ð° Grades ÑƒÐ¶Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚!';
 GO
 
 
 
 
-PRINT 'Ñîçäàíèå òàáëèöû Exams...';
+PRINT 'Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñ‹ Exams...';
 GO
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Exams')
 BEGIN
@@ -253,8 +252,8 @@ CREATE TABLE Exams
 	discipline			SMALLINT				CONSTRAINT FK_Exams_Disciplines	FOREIGN KEY REFERENCES Disciplines(discipline_id),
 	grade				TINYINT					CONSTRAINT CK_Exams_Grade		CHECK (grade>0 AND grade <=12)
 )
-PRINT 'Òàáëèöà Exams óñïåøíî ñîçäàíà!';
+PRINT 'Ð¢Ð°Ð±Ð»Ð¸Ñ†Ð° Exams ÑƒÑÐ¿ÐµÑˆÐ½Ð¾ ÑÐ¾Ð·Ð´Ð°Ð½Ð°!';
 END
 ELSE
-PRINT 'Òàáëèöà Exams óæå ñóùåñòâóåò!';
+PRINT 'Ð¢Ð°Ð±Ð»Ð¸Ñ†Ð° Exams ÑƒÐ¶Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚!';
 GO

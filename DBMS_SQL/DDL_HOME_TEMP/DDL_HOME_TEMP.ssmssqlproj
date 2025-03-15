@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
-<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Tra-SQL">
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="DDL_HOME_TEMP">
   <Items>
     <LogicalFolder Name="Connections" Type="2" Sorted="true">
       <Items>
         <ConnectionNode Name="USER-PC\SQLEXPRESS:USER-PC\Professional">
-          <Created>2025-02-16T17:22:54.3911077+05:00</Created>
+          <Created>2025-03-07T17:48:52.956831+05:00</Created>
           <Type>SQL</Type>
           <Server>USER-PC\SQLEXPRESS</Server>
           <UserName />
           <Authentication>Windows Authentication</Authentication>
-          <InitialDB>VPD_311_Import</InitialDB>
+          <InitialDB>Academy_temp</InitialDB>
           <LoginTimeout>30</LoginTimeout>
           <TrustServerCertificate>False</TrustServerCertificate>
           <HostNameInServerCertificate />
@@ -22,53 +22,41 @@
     </LogicalFolder>
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
-        <FileNode Name="SQLQuery0 - Check.sql">
+        <FileNode Name="SQLQuery - CREATE DATABASE.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:USER-PC\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>USER-PC\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>SQLQuery0 - Check.sql</FullPath>
+          <FullPath>SQLQuery - CREATE DATABASE.sql</FullPath>
         </FileNode>
-        <FileNode Name="SQLQuery1 - CREATE SELECT FROM Schedule.sql">
+        <FileNode Name="SQLQuery0 - DROP DATABAS.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:USER-PC\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>USER-PC\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>SQLQuery1 - CREATE SELECT FROM Schedule.sql</FullPath>
+          <FullPath>SQLQuery0 - DROP DATABAS.sql</FullPath>
         </FileNode>
-        <FileNode Name="SQLQuery1 - INSERT to Schedule.sql">
+        <FileNode Name="SQLQuery2 - CREATE TABLES.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:USER-PC\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>USER-PC\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>SQLQuery1 - INSERT to Schedule.sql</FullPath>
+          <FullPath>SQLQuery2 - CREATE TABLES.sql</FullPath>
         </FileNode>
-        <FileNode Name="SQLQuery1 - SELECT DisciplineForGroup.sql">
+        <FileNode Name="SQLQuery3 - CREATE Teachers.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:USER-PC\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>USER-PC\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>SQLQuery1 - SELECT DisciplineForGroup.sql</FullPath>
+          <FullPath>SQLQuery3 - CREATE Teachers.sql</FullPath>
         </FileNode>
-        <FileNode Name="SQLQuery1 - SELECT FROM Schedule.sql">
+        <FileNode Name="SQLQuery4 - CREATE Disciplines.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:USER-PC\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>USER-PC\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>SQLQuery1 - SELECT FROM Schedule.sql</FullPath>
+          <FullPath>SQLQuery4 - CREATE Disciplines.sql</FullPath>
         </FileNode>
-        <FileNode Name="SQLQuery1 - SELECT ScheduleForGroup.sql">
+        <FileNode Name="SQLQuery5 - CREATE Schedule.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:USER-PC\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>USER-PC\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>SQLQuery1 - SELECT ScheduleForGroup.sql</FullPath>
-        </FileNode>
-        <FileNode Name="SQLQuery2 - CREATE SetScheduleForSemistacionar.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:USER-PC\SQLEXPRESS:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>USER-PC\SQLEXPRESS</AssociatedConnSrvName>
-          <AssociatedConnUserName />
-          <FullPath>SQLQuery2 - CREATE SetScheduleForSemistacionar.sql</FullPath>
-        </FileNode>
-        <FileNode Name="SQLQuery2 - INSERT LessonToSchedule.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:USER-PC\SQLEXPRESS:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>USER-PC\SQLEXPRESS</AssociatedConnSrvName>
-          <AssociatedConnUserName />
-          <FullPath>SQLQuery2 - INSERT LessonToSchedule.sql</FullPath>
+          <FullPath>SQLQuery5 - CREATE Schedule.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>

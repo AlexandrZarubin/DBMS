@@ -5,13 +5,34 @@ VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "DBMS_SQL", "DBMS_SQL\DBMS_SQL.ssmssqlproj", "{69FC6CDC-33DC-4552-82D0-1AD3735DBADC}"
 EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "DDL", "DDL\DDL.ssmssqlproj", "{E218C290-BC46-4EAE-853C-C023E0C0865C}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "DDL_ALL_HOME", "DDL_ALL_HOME\DDL_ALL_HOME.ssmssqlproj", "{C6864B3E-9054-45B1-951D-07FE18026ECE}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "DML", "DML\DML.ssmssqlproj", "{1C8DAB85-C614-477C-B1DA-10594CCAFBEA}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Tra-SQL", "Tra-SQL\Tra-SQL.ssmssqlproj", "{3DB2CC94-6249-45AF-BB1E-6D7CD46923E9}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "DML_HOME", "DML_HOME\DML_HOME.ssmssqlproj", "{526EEB29-1366-4431-9BC1-410D94EC7958}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "ScheduleFunctions", "ScheduleFunctions\ScheduleFunctions.ssmssqlproj", "{A20ADEC6-CB14-4A44-8522-EE60ACF334AD}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "ScheduleHome", "ScheduleHome\ScheduleHome.ssmssqlproj", "{F014241C-55B1-4598-B812-267EF5EF3EA1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Default|Default = Default|Default
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{69FC6CDC-33DC-4552-82D0-1AD3735DBADC}.Default|Default.ActiveCfg = Default
-		{8CBFDD5C-47B8-450B-AE06-C9F764A42248}.Default|Default.ActiveCfg = Default
+		{E218C290-BC46-4EAE-853C-C023E0C0865C}.Default|Default.ActiveCfg = Default
+		{C6864B3E-9054-45B1-951D-07FE18026ECE}.Default|Default.ActiveCfg = Default
+		{1C8DAB85-C614-477C-B1DA-10594CCAFBEA}.Default|Default.ActiveCfg = Default
+		{3DB2CC94-6249-45AF-BB1E-6D7CD46923E9}.Default|Default.ActiveCfg = Default
+		{526EEB29-1366-4431-9BC1-410D94EC7958}.Default|Default.ActiveCfg = Default
+		{A20ADEC6-CB14-4A44-8522-EE60ACF334AD}.Default|Default.ActiveCfg = Default
+		{25EDEB5F-84D4-473D-B77C-CD7FF05B3DCE}.Default|Default.ActiveCfg = Default
+		{F014241C-55B1-4598-B812-267EF5EF3EA1}.Default|Default.ActiveCfg = Default
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

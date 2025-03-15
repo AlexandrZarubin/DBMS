@@ -8,7 +8,7 @@ SELECT
     COUNT(DISTINCT teacher_id) AS N'Кол-во преподавателей'
 FROM Teachers, Disciplines ,TeachersDisciplinesRelation
 WHERE
-    teacher_id = teacher_id
-    AND discipline_id = discipline_id
+    teacher = teacher_id
+    AND discipline = discipline_id
 GROUP BY
     discipline_name;
